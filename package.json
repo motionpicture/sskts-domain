@@ -25,7 +25,8 @@
     "request-promise-native": "^1.0.4",
     "sendgrid": "^5.1.2",
     "underscore": "^1.8.3",
-    "validator": "^7.2.0"
+    "validator": "^7.2.0",
+    "snyk": "^1.41.1"
   },
   "description": "SSKTS Domain Library for Node.js",
   "devDependencies": {
@@ -44,7 +45,6 @@
     "nsp": "^2.6.3",
     "nyc": "^10.3.2",
     "rimraf": "^2.6.1",
-    "snyk": "^1.36.2",
     "tslint": "^5.5.0",
     "tslint-microsoft-contrib": "^5.0.1",
     "typescript": "^2.4.1"
@@ -80,8 +80,11 @@
     "preversion": "npm run clean && npm run build && npm test",
     "version": "git add -A",
     "postversion": "git push origin --tags",
-    "prepublishOnly": "npm run clean && npm run build && npm test"
+    "prepublishOnly": "npm run clean && npm run build && npm test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "types": "./types/lib/index.d.ts",
-  "version": "22.0.0"
+  "version": "22.0.0",
+  "snyk": true
 }
