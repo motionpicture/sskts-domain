@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.13.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:tough-cookie:20170905':
@@ -43,4 +43,8 @@ ignore:
     - mongoose > mquery > debug:
         reason: waiting update
         expires: '2017-10-28T04:32:06.533Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:lodash:20180130':
+    - '@motionpicture/sskts-factory > @cinerino/factory > @movieticket/reserve-api-nodejs-client > @movieticket/reserve-api-abstract-client > @motionpicture/mvtk-reserve-service > soap > lodash':
+        patched: '2018-12-10T06:30:45.348Z'
