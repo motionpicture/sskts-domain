@@ -31,7 +31,8 @@
     "pug": "^2.0.3",
     "redis": "^2.8.0",
     "request": "^2.87.0",
-    "validator": "^10.4.0"
+    "validator": "^10.4.0",
+    "snyk": "^1.116.2"
   },
   "description": "SSKTS Domain Library for Node.js",
   "devDependencies": {
@@ -62,7 +63,6 @@
     "rimraf": "^2.6.2",
     "sinon": "^4.5.0",
     "sinon-mongoose": "^2.2.1",
-    "snyk": "^1.89.1",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-microsoft-contrib": "^5.1.0",
@@ -108,7 +108,10 @@
     "preversion": "npm run clean && npm run build && npm test && npm run doc",
     "version": "git add -A",
     "postversion": "git push origin --tags",
-    "prepublishOnly": "npm run clean && npm run build && npm test && npm run doc"
+    "prepublishOnly": "npm run clean && npm run build && npm test && npm run doc",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
-  "version": "26.3.0"
+  "version": "26.3.0",
+  "snyk": true
 }
